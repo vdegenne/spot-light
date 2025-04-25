@@ -1,6 +1,6 @@
 {
 	"name": "@vdegenne/spot-light",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "spot light custom element",
 	"type": "module",
 	"author": "Valentin Degenne <vdegenne@gmail.com>",
