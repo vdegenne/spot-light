@@ -6,7 +6,7 @@ import {saveToLocalStorage} from 'snar-save-to-local-storage';
 
 @saveToLocalStorage('sfc:theme')
 class ThemeStore extends ReactiveController {
-	@state() colorMode = ColorMode.SYSTEM;
+	@state() colorMode = ColorMode.DARK;
 	/**
 	 * When changing the following default value, we also have
 	 * to make sure to provide the tokens on start,

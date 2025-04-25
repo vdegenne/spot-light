@@ -6,7 +6,7 @@ import {FormBuilder} from './forms/FormBuilder.js';
 export class AppStore extends ReactiveController {
 	@state() color = '#ffffff';
 	@state() switched = true;
-	@state() brightness = 0.5;
+	@state() brightness = 0.7;
 	@state() sizePx = 1844;
 	@state() diffusion = 63;
 	@state() angle = 60;
