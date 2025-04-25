@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"useDefineForClassFields": false,
+		"experimentalDecorators": true,
+		"resolveJsonModule": true,
+		"types": ["vite/client", "lit", "lit/decorators.js", "material-shell"]
+	},
+	"include": ["./src/**/*.ts"]
+}

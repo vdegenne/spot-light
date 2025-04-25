@@ -1,0 +1,59 @@
+@import 'tailwindcss/theme';
+@import 'tailwindcss/utilities';
+/*@source "../../../node_modules/@vdegenne/forms/lib/FormBuilder.js";*/
+
+[hidden] {
+	display: none !important;
+}
+
+[invisible] {
+	opacity: 0;
+	pointer-events: none;
+}
+
+[primary] {
+	color: var(--md-sys-color-primary);
+}
+[secondary] {
+	color: var(--md-sys-color-secondary);
+}
+[secondary-container] {
+	background-color: var(--md-sys-color-secondary-container);
+	color: var(--md-sys-color-on-secondary-container);
+}
+[outlined] {
+	color: var(--md-sys-color-outline-variant);
+}
+
+[error] {
+	--md-sys-color-primary: var(--md-sys-color-error);
+	--md-sys-color-on-primary: var(--md-sys-color-on-error);
+	--md-sys-color-surface-container-low: var(--md-sys-color-error-container);
+	--md-sys-color-on-surface: var(--md-sys-color-on-error-container);
+	--md-sys-color-secondary-container: var(--md-sys-color-error);
+	--md-sys-color-on-secondary-container: var(--md-sys-color-on-error);
+	--md-sys-color-on-surface-variant: var(--md-sys-color-error);
+}
+
+/* .flex {
+	display: flex;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.centered {
+	text-align: center;
+} */
+
+[jp] {
+	font-family: 'Noto Serif JP';
+	font-family: 'Zen Maru Gothic';
+	position: relative;
+	top: -2px;
+}

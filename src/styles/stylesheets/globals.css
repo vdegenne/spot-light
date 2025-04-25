@@ -1,0 +1,21 @@
+/* @import url(./roboto.css); */
+/* @import url(./japanese.css); */
+
+:root {
+	/* --md-icon-font: 'Material Symbols Rounded'; */
+	--md-list-container-color: transparent;
+
+	/** when using material shell this will replace the default
+	 * which is `--md-sys-color-surface-container` on the :root
+	 */
+	background-color: var(--md-sys-color-surface);
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+	color: var(--md-sys-color-on-surface);
+
+	position: absolute;
+	inset: 0;
+}

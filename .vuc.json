@@ -1,0 +1,10 @@
+{
+  "port": 40673,
+  "include": "./src/**/*.{ts,tsx,js,jsx,html,css}",
+  "openStrategy": "tmux-vim",
+  "tmuxOptions": {
+    "session": ":"
+  },
+  "postExec": "wlrctl window focus kitty",
+  "debug": false
+}
