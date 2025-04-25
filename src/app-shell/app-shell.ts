@@ -40,11 +40,12 @@ export class AppShell extends LitElement {
 				.sizePx="${store.sizePx}"
 				.diffusion=${store.diffusion}
 				color="${themeStore.themeColor}"
+				.clipAngle=${store.angle}
 			></spot-light>
 
 			<div class="absolute inset-0 flex flex-col items-center">
 				<div class="flex-1"></div>
-				<div class="flex-1">
+				<div class="flex-2">
 					<div class="flex flex-col gap-4">
 						<div class="mb-1 flex items-center gap-4">
 							${renderThemeElements()}
@@ -56,6 +57,7 @@ export class AppShell extends LitElement {
 							step: 0.01,
 						})}
 						${F.SLIDER('Diffusion', 'diffusion', {min: 0, max: 100, step: 1})}
+						${F.SLIDER('Angle', 'angle', {min: 0, max: 999, step: 1})}
 					</div>
 
 					<pre>
@@ -65,6 +67,7 @@ export class AppShell extends LitElement {
 	.sizePx="${store.sizePx}"
 	.diffusion="${store.diffusion}"
 	color="${themeStore.themeColor}"
+	.clipAngle=${store.angle}
 ></spot-light>
 				`}
 </pre
