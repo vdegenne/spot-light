@@ -88,5 +88,13 @@
 				"./.vuc.json"
 			]
 		}
+	},
+	"files": [
+		"./lib/spot-light.js"
+	],
+	"exports": {
+		".": {
+			"default": "./lib/spot-light.js"
+		}
 	}
 }
