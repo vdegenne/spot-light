@@ -3,14 +3,11 @@ import {LitElement, html} from 'lit';
 import {withStyles} from 'lit-with-styles';
 import {customElement} from 'lit/decorators.js';
 import {materialShellLoadingOff} from 'material-shell';
-import {F, store} from '../store.js';
-import styles from './app-shell.css?inline';
 import '../spot-light.js';
-import {
-	renderColorPicker,
-	renderThemeElements,
-} from '../styles/theme-elements.js';
+import {F, store} from '../store.js';
+import {renderColorPicker} from '../styles/theme-elements.js';
 import {themeStore} from '../styles/themeStore.js';
+import styles from './app-shell.css?inline';
 
 declare global {
 	interface Window {
