@@ -24,10 +24,10 @@ class ThemeStore extends ReactiveController {
 		);
 		const theme = themeFromSourceColor(
 			this.themeColor,
-			// ThemeManager.appliedColorScheme === 'dark',
-			ThemeManager.preferredColorScheme === 'dark',
+			ThemeManager.appliedColorScheme === 'dark',
+			// ThemeManager.preferredColorScheme === 'dark',
 			'vibrant',
-			0
+			0,
 		);
 		applyTheme(document, theme!);
 	}
