@@ -25,7 +25,9 @@ export class SpotLight extends LitElement {
 		.spot {
 			position: absolute;
 			left: 50%;
-			transition: filter 0.3s ease-in-out;
+			transition:
+				filter 0.3s ease-in-out,
+				opacity 0.3s linear;
 		}
 	`;
 
@@ -36,7 +38,7 @@ export class SpotLight extends LitElement {
 			background: `radial-gradient(circle, ${this.color} 0%, transparent ${this.diffusion}%)`,
 			clipPath: `polygon(50% 50%, ${50 + this.clipAngle}% 100%, ${50 - this.clipAngle}% 100%)`,
 			// filter: `brightness(${this.brightness})`,
-			opacity: `${this.brightness}`,
+			opacity: `${this.switched ? this.brightness : 0}`,
 			transform: `translate(-50%, -${this.sizePx / 1.99}px)`,
 		});
 		return html`<div class="spot" style="${style}"></div>`;

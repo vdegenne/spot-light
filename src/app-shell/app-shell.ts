@@ -36,6 +36,7 @@ export class AppShell extends LitElement {
 		return html`<!-- -->
 
 			<spot-light
+				.switched=${store.switched}
 				.brightness=${store.brightness}
 				.sizePx="${store.sizePx}"
 				.diffusion=${store.diffusion}
@@ -45,8 +46,21 @@ export class AppShell extends LitElement {
 
 			<div class="absolute inset-0 flex flex-col items-center">
 				<div class="flex-1"></div>
-				<div class="flex-2">
+				<div class="flex-3">
 					<div class="flex flex-col gap-4">
+						<div class="text-center mb-8">
+							${store.switched
+								? html`
+										<md-filled-icon-button @click=${store.toggleLight}>
+											<md-icon>power_settings_new</md-icon>
+										</md-filled-icon-button>
+									`
+								: html`
+										<md-icon-button @click=${store.toggleLight}>
+											<md-icon>power_settings_new</md-icon>
+										</md-icon-button>
+									`}
+						</div>
 						<div class="mb-1 flex items-center gap-4">
 							${renderThemeElements()}
 						</div>
@@ -62,7 +76,7 @@ export class AppShell extends LitElement {
 
 					<pre>
 					${`
-<spot-light
+<spot-light ${store.switched ? 'switched' : ''}
 	.brightness="${store.brightness}"
 	.sizePx="${store.sizePx}"
 	.diffusion="${store.diffusion}"
@@ -78,13 +92,14 @@ export class AppShell extends LitElement {
 			<md-text-button class="absolute top-3 left-3 text-xl"
 				>${'<spot-light></spot-light>'}</md-text-button
 			>
-			<md-icon-button
+			<md-filled-tonal-button
 				class="absolute top-3 right-3"
 				href="https://github.com/vdegenne/spot-light"
 				target="_blank"
 			>
-				<md-icon>${unsafeSVG(SVG_GITHUB)}</md-icon>
-			</md-icon-button>
+				<md-icon slot="icon">${unsafeSVG(SVG_GITHUB)}</md-icon>
+				<span>See on GitHub</span>
+			</md-filled-tonal-button>
 			<!-- -->`;
 	}
 }
