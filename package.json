@@ -1,5 +1,5 @@
 {
-	"name": "spot-light",
+	"name": "@vdegenne/spot-light",
 	"version": "1.0.0",
 	"description": "spot light custom element",
 	"type": "module",
